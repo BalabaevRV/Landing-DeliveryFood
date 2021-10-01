@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Доставка рационов питания</title>
+	<link href="/css/bundle.min.css" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<a href="/" class="logo">
+			<img src="/img/logo.svg" alt="MyFood — logo" width="62" height="58">
+		</a>
+		<select name="city" id="selectCity" class="selectCity">
+  			<option value="Moscow">Москва</option>
+  			<option value="RostovOnDon">Ростов-на-Дону</option>
+  			<option value="SaintPetersburg">Санкт-Петербруг</option>
+		</select>
+		<nav class="header__navigation mainNavigation">
+			<li><a href="#" class="link">Вопросы-ответы</a></li>
+			<li><a href="#" class="link">Преимущества</a></li>
+			<li><a href="#" class="link">О нас</a></li>
+			<li><a href="#" class="link">Контакты</a></li>
+		</nav>
+		<a href="tel:+89899744538" class="link">8 (989) 974-45-38</a>
+	</header>
+	<main>
+		<section class="heroScreen">
+			<h1 class="hidden">Доставка рационов питания</h1>
+			<div class="heroScreen__textBlock">
+				<p class="heroScreen__title heroTitle">Питайся правильно экономя время и деньги</p>
+				<p class="heroScreen__subTitle subtitle">Готовим и доставляем вкусную еду</p>	
+				<button class="btn">
+					<span>Выбрать рацион</span>
+				</button>
+			</div>	
+			<div class="heroScreen__imgBlock">
+				<img src="/img/heroImg.png" width="856" height="878" alt="Сковорода с вкусной едой">
+			</div>
+		</section>
+		<section class="howItWork">
+			<h2 class="title">Как начать вкусно и правильно  питаться?</h2>	
+			<ol class="howItWork__stages StagesList">
+				<li class="StagesList__item StagesList__item--first">
+					<span class="StagesList__num">1</span>
+					Вы выбираете рацион
+				</li>
+				<li class="StagesList__item StagesList__item--second">
+					<span class="StagesList__num">2</span>
+					Мы закупаем продукты
+				</li>
+				<li class="StagesList__item StagesList__item--third">
+					<span class="StagesList__num">3</span>
+					Готовим лучшие блюда
+				</li>
+				<li class="StagesList__item StagesList__item--fourth">
+					<span class="StagesList__num">4</span>
+					Доставляем вам еду
+				</li>
+				<li class="StagesList__item StagesList__item--fifth">
+					<span class="StagesList__num">5</span>
+					Приятного аппетита!
+				</li>							
+			</ol>
+		</section>
+		<section class="aboutUs">
+			<h2>Питание с MyFood это</h2>
+			<ul class="aboutUs__list advantagesList">
+				<li class="advantagesList__item">
+					<h3 class="subtitle">Полезно</h3> 
+					<p class="text">В наших рационах есть все необходимые питательные вещества</p>
+				</li>
+				<li class="advantagesList__item">
+					<h3 class="subtitle">Вкусно</h3> 
+					<p class="text">Блюда в рационе не повторяется минимум 30 дней</p>
+				</li>
+				<li class="advantagesList__item">
+					<h3 class="subtitle">Удобно</h3> 
+					<p class="text">Блюда герметично упакованы в пищевые контейнеры</p>
+				</li>
+			</ul>
+		</section>
+		<section class="aboutMenu">
+			<h2 class="title">У нас разнообразное меню</h2>
+			<ul class="aboutMenu__list MenuList">
+				<li class="MenuList__item">
+					<h3 class="subtitle">
+						Европейская кухня
+					</h3>
+					<p class="text">
+						Домашние блюда европейской кухни. Просто, вкусно, знакомо
+					</p>
+				</li>
+				<li class="MenuList__item">
+					<h3 class="subtitle">
+						Мировая кухня
+					</h3>
+					<p class="text">
+						Кухня со всего мира. Максимально разнообразно и оригинально
+					</p>
+				</li>				
+			</ul>
+		</section>
+		<section class="foodGallery">
+			<h2 class="title">Что сегодня в меню?</h2>
+			<div class="radioButton menuType">
+				<input type="radio" id="worldMenu" name="menu" value="worldMenu" checked> 
+				<label for="worldMenu">Мировая</label>
+			</div>
+			<div class="radioButton menuType">
+				<input type="radio" id="europeMenu" name="menu" value="europeMenu"> 
+				<label for="europeMenu">Европейская</label>
+			</div>
+			<ul class="foodGallery__slider foodGallery__slider--current
+			foodSlider" id="galleryOfWorldMenu">		
+				<li class="foodSlider__item foodSlider__item--current">
+					<figure>
+						<img src="/img/worldFood1.png" alt="Бургер" width="420" height="308">
+						<figcaption class="foodSlider__sign subtitle">Бургер</figcaption> 
+					</figure>
+				</li>
+				<li class="foodSlider__item foodSlider__item--current">
+					<figure>
+						<img src="/img/worldFood2.png" alt="Пироженное" width="420" height="308">
+						<figcaption class="sign">Пироженное</figcaption> 
+					</figure>
+				</li>
+				<li class="foodSlider__item foodSlider__item--current">
+					<figure>
+						<img src="/img/worldFood3.png" alt="Курица" width="420" height="308">
+						<figcaption class="sign">Курица</figcaption> 
+					</figure>
+				</li>
+				<li class="foodSlider__item foodSlider__item--current">
+					<figure>
+						<img src="/img/worldFood4.png" alt="Фасоль" width="420" height="308">
+						<figcaption class="sign">Фасоль</figcaption> 
+					</figure>
+				</li>
+			</ul>	
+			<ul class="foodGallery__slider foodGallery__slider--current
+			foodSlider" id="galleryOfEuropeMenu">		
+				<li class="foodSlider__item foodSlider__item--current">
+					<figure>
+						<img src="/img/europeFood1.png" alt="Каша" width="420" height="308">
+						<figcaption class="foodSlider__sign subtitle">Каша</figcaption> 
+					</figure>
+				</li>
+				<li class="foodSlider__item foodSlider__item--current">
+					<figure>
+						<img src="/img/europeFood2.png" alt="Овощи" width="420" height="308">
+						<figcaption class="sign">Овощи</figcaption> 
+					</figure>
+				</li>
+				<li class="foodSlider__item foodSlider__item--current">
+					<figure>
+						<img src="/img/europeFood3.png" alt="Сырники" width="420" height="308">
+						<figcaption class="sign">Сырники</figcaption> 
+					</figure>
+				</li>
+				<li class="foodSlider__item foodSlider__item--current">
+					<figure>
+						<img src="/img/europeFood4.png" alt="Винигрет" width="420" height="308"> 
+						<figcaption class="sign">Винигрет</figcaption> 
+					</figure>
+				</li>
+			</ul>
+			<ul class="foodSlider__nav">
+				<li>
+					<button class="foodSlider__button" aria-label="move slider to left">
+						<img src="/img/arrow.png" alt="left arrow" class="foodSlider__arrow" height="30" width="40">
+					</button>
+				</li>
+				<li>
+					<button class="foodSlider__button" aria-label="move slider to right">
+						<img src="/img/arrow.png" alt="Right arrow" class="foodSlider__arrow--right" height="30" width="40">
+					</button>
+				</li>
+			</ul>			
+		</section>
+		<section class="reviews">
+			<h2 class="title">Отзывы наших клиентов</h2>
+			<ul class="reviewsCarousel">
+				<li class="reviewsCarousel__item reviewsCarousel__item--current" >
+					<img src="/img/review1.jpg" alt="Отзыв от нашего клиента" width="374" height="735">
+				</li>
+				<li class="reviewsCarousel__item reviewsCarousel__item--current" >
+					<img src="/img/review2.jpg" alt="Отзыв от нашего клиента" width="374" height="735">
+				</li>
+				<li class="reviewsCarousel__item reviewsCarousel__item--current" >
+					<img src="/img/review3.jpg" alt="Отзыв от нашего клиента" width="374" height="735">
+				</li>
+				<li class="reviewsCarousel__item reviewsCarousel__item--current" >
+					<img src="img/review4.jpg" alt="Отзыв от нашего клиента" width="374" height="735">
+				</li>	
+				<li class="reviewsCarousel__item reviewsCarousel__item--current" >
+					<img src="img/review5.jpg" alt="Отзыв от нашего клиента" width="374" height="735">
+				</li>												
+			</ul>
+			<ul class="socialNetworkList">
+				<li>
+					<a href="https://www.instagram.com/">
+						<svg width="30" height="30">
+							<use xlink:href="/img/sprite.svg#instagram"></use>
+						</svg>							
+					</a>
+				</li>
+				<li>
+					<a href="https://vk.com/">
+						<svg width="30" height="30">
+							<use xlink:href="/img/sprite.svg#vk"></use>
+						</svg>	
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/">
+						<svg width="30" height="30">
+							<use xlink:href="/img/sprite.svg#fb"></use>
+						</svg>							
+					</a>
+				</li>				
+			</ul>
+		</section>
+		<section class="captionForm">
+			<h2 class="title">Выбрать рацион</h2>
+			<form class="captionForm__title orderForm">
+				<div class="captionForm__input">	
+					<div class="radioButton">
+						<input type="radio" id="worldMenuOrder" name="menuOrder" value="worldMenu" checked> 
+						<label for="worldMenuOrder">Мировая</label>
+					</div>
+					<div class="radioButton">
+						<input type="radio" id="europeMenuOrder" name="menuOrder" value="europeMenu"> 
+						<label for="europeMenuOrder" class="signInput">Европейская</label>
+					</div>
+				</div>
+				<div class="captionForm__input">	
+					<label for="numOfDishes" class="sign">Количество блюд в день</label>
+					<select type="select" id="numOfDishes" class=
+					"selectNumOfDishes">
+						<option value="3">3</option>
+						<option value="5">5</option>
+						<option value="7">7</option>		
+					</select> 
+				</div>
+				<div class="captionForm__input">	
+					<label for="numOfWeek" class="sign">Продолжительность</label>
+					<input type="number" id="numOfWeek" class="selectNumOfWeek">
+					<span class="sign">недель</span>
+				</div>	
+				<p class="captionForm__paragraph">	
+					<span class="sign">Итого</span>
+					<span class="text text--crossed">21 000 ₽</span>
+					<span class="text">16 500 ₽</span>
+				</p>
+				<button class="btn">
+					<span>Заказать</span>
+				</button>		
+			</form>
+		</section>
+		<section class="FAQ">
+			<h2 class="hidden">Часто задаваемые вопросы</h2>
+			<ul class="FAQ__list QuestionList">
+				<li>
+					<h3 class="QuestionList__question sign">Где узнать КБЖУ каждого блюда</h3>
+					<p class="QuestionList__answer text">В твоей доставке обязательно будет бумажное меню с указанием КБЖУ каждого блюда. Также, эту информацию ты можешь найти на пленке вместе с подробным составом.</p>
+				</li>
+				<li>
+					<h3 class="QuestionList__question sign">Почему доставка только утром?</h3>
+					<p class="QuestionList__answer text">Все блюда готовятся в ночь перед доставкой, поэтому утром к тебе приезжает свежая и вкусная еда.</p>
+				</li>				
+				<li>
+					<h3 class="QuestionList__question sign">Как часто повторяется меню</h3>
+					<p class="QuestionList__answer text">Меню не повторяется в течение 30 дней. Каждая доставка — новые блюда. Мы ежемесячно обновляем меню и регулярно добавляем новинки.</p>
+				</li>
+				<li>
+					<h3 class="QuestionList__question sign">Сколько хранится еда?</h3>
+					<p class="QuestionList__answer text">Сразу после получения коробки от курьера, ее нужно разобрать и убрать все контейнеры в холодильник. Там их и хранить. В таком случае сохранится полный срок годности — от 72 часов</p>
+				</li>
+				<li>
+					<h3 class="QuestionList__question sign">Есть ли заморозка дней?</h3>
+					<p class="QuestionList__answer text">
+					Есть. Ты всегда можешь перенести свой заказ. Для этого воспользуйся «заморозкой». До 12:00 за день до доставки внеси изменения в заказ в личном кабинете или с менеджером по телефону.</p>
+				</li>														
+				<li>
+					<h3 class="QuestionList__question sign">Можно ли разогревать в СВЧ?</h3>
+					<p class="QuestionList__answer text">Разогреть еду можно в микроволновке, надрезав или сняв пленку. Мы используем пищевые боксы, которые предназначены для разогрева в СВЧ-печи.</p>
+				</li>
+				<li>
+					<h3 class="QuestionList__question sign">Где вы все это готовите?</h3>
+					<p class="QuestionList__answer text">У нас собственное производство с «умным» оборудованием. Придумано человеком, идеально исполнено роботом! </p>
+				</li>														
+			</ul>
+		</section>
+		<button class="btn">
+			<span>Задать вопрос</span>
+		</button>	
+	</main>
+	<footer class="footer">
+			<a href="/" class="logo">
+			<img src="/img/logo.svg" alt="MyFood — logo" width="62" height="58">
+		</a>
+		<nav class="footer__navigation mainNavigation">
+			<li><a href="#" class="link">Вопросы-ответы</a></li>
+			<li><a href="#" class="link">Преимущества</a></li>
+			<li><a href="#" class="link">О нас</a></li>
+			<li><a href="#" class="link">Контакты</a></li>
+		</nav>
+		<a href="tel:+89899744538" class="link">8 (989) 974-45-38</a>
+			<ul class="socialNetworkList">
+				<li>
+					<a href="https://www.instagram.com/">
+						<svg width="30" height="30">
+							<use xlink:href="/img/sprite.svg#instagram"></use>
+						</svg>							
+					</a>
+				</li>
+				<li>
+					<a href="https://vk.com/">
+						<svg width="30" height="30">
+							<use xlink:href="/img/sprite.svg#vk"></use>
+						</svg>	
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/">
+						<svg width="30" height="30">
+							<use xlink:href="/img/sprite.svg#fb"></use>
+						</svg>							
+					</a>
+				</li>				
+			</ul>
+		<small>© MyFood. Все права защищены</small>
+	</footer>
+</body>
+</html>
