@@ -1,1 +1,458 @@
 @import settings
+
+.hidden
+	display: none
+
+.heroTitle 
+	font-family: $heroTitle
+	font-size: 96px
+	color: $red
+	text-shadow: 1px 0 0
+
+.subtitle
+	font-family: $text
+	font-size: 24px
+	font-weight: 700	
+
+.title
+	font-family: $text
+	font-size: 40px
+	font-weight: 900
+
+.sign
+	font-family: $text
+	font-size: 20px
+	font-weight: 700	
+
+.copyright
+	font-family: $text
+	font-size: 14px
+	font-weight: 400
+
+.title--white
+	color: $white
+
+.subtitle--white
+	color: $white
+
+.text--white
+	color: $white
+
+.sign--white	
+	color: $white
+
+.copyright--white
+	color: $white
+
+.btn
+	background: none
+	min-width: 310px
+	min-height: 48px
+	background-image: url("/img/bgButton.png")
+	padding-left: 50px
+	color: $white
+	text-align: left
+	cursor: pointer
+
+.btn--order	
+	padding-left: 85px
+
+.mainNavigation
+	display: flex
+
+.mainNavigation__item
+	margin-right: 33px
+
+.mainNavigation__item:last-child
+	margin-right: 0
+
+.selectCity 
+	border: none
+	cursor: pointer
+	background: url("/img/selectArrow.svg")
+	background-repeat: no-repeat
+	text-align: right
+	padding-right: 20px
+	color: $white
+	background-position: center
+	appearance: none
+	background-position-x: 98%
+	background-position-y: 70%
+
+.selectCity option
+	color: $black
+
+.link--white
+	color: $white	
+
+.stagesList__item
+	display: flex
+	align-items: center
+	font-family: $text
+	font-size: 40px
+	font-weight: 500
+	position: relative
+
+.stagesList__num
+	position: absolute
+	left: 0 
+	top: 50px	
+	font-size: 18px
+	font-weight: 700	
+
+.stagesList__item--first::before
+	background-image: url("/img/1stStep.png"), url("/img/ellipse.svg")
+	background-repeat: no-repeat
+	background-position: 7.5px 7px, center bottom
+	content: ""
+	display: block
+	width: 120px
+	height: 160px
+
+.stagesList__item--first::after
+	background-image: url("/img/1stStepPath.svg")
+	background-repeat: no-repeat
+	position: absolute
+	content: ""
+	display: block
+	width: 120px
+	height: 160px
+	top: 160px
+	left: 90px	
+
+.stagesList__item--second
+	margin-left: 200px
+
+.stagesList__item--second::before	
+	background-image: url("/img/2ndStep.png"), url("/img/ellipse.svg")
+	background-repeat: no-repeat
+	background-position: -5px 35px, center bottom
+	content: ""
+	display: block
+	width: 140px
+	height: 160px
+
+.stagesList__item--second::after
+	background-image: url("/img/2ndStepPath.svg")
+	background-repeat: no-repeat
+	position: absolute
+	content: ""
+	display: block
+	width: 120px
+	height: 160px	
+	top: 160px
+	left: 90px	
+
+.stagesList__item--third
+	margin-left: 400px
+
+.stagesList__item--third::before	
+	background-image: url("/img/3rdStep.png"), url("/img/ellipse.svg")
+	background-repeat: no-repeat
+	background-position: 4px 3px, center bottom
+	content: ""
+	display: block
+	width: 140px
+	height: 160px	
+
+.stagesList__item--third::after
+	background-image: url("/img/3rdStepPath.svg")
+	position: absolute
+	background-repeat: no-repeat
+	content: ""
+	display: block
+	width: 120px
+	height: 160px
+	top: 150px
+	left: -90px	
+
+
+.stagesList__item--fourth
+	margin-left: 200px
+
+.stagesList__item--fourth::before	
+	background-image: url("/img/4thStep.png"), url("/img/ellipse.svg")
+	background-repeat: no-repeat
+	background-position: 0 32px, center bottom
+	content: ""
+	display: block
+	width: 140px
+	height: 160px		
+
+.stagesList__item--fourth::after
+	background-image: url("/img/4thStepPath.svg")
+	position: absolute
+	background-repeat: no-repeat
+	content: ""
+	display: block
+	width: 120px
+	height: 160px	
+	top: 170px
+	left: -10px	
+
+.stagesList__item--fifth::before	
+	background-image: url("/img/5thStep.png"), url("/img/ellipseMin.svg")
+	background-size: auto, 220px 220px
+	background-repeat: no-repeat
+	background-position: -6px -18px, center bottom
+	content: ""
+	display: block
+	width: 220px
+	height: 302px
+
+.advantagesList__item
+	position: relative
+
+.advantagesList__item::before
+	background-image: url("/img/check.png")
+	background-repeat: no-repeat
+	content: ""
+	display: block
+	position: absolute
+	width: 45px
+	height: 42px
+	bottom: 0
+	left: -50px
+
+.stagesList__text
+	width: 340px
+	padding-left: 10px
+	text-align: left	
+
+.advantagesList__title
+	margin-bottom: 10px
+
+.advantagesList__text
+	margin-bottom: 40px	
+	max-width: 430px
+
+
+.MenuList
+	display: flex
+	justify-content: space-between
+	
+.MenuList__item
+	max-width: 400px
+
+.radioButtons
+	display: flex
+
+.orderForm__radioButtons
+	margin-bottom: 20px
+
+.captionForm__input
+	margin-bottom: 20px
+
+.captionForm__paragraph	
+	margin-bottom: 20px	
+
+.selectNum
+	background: none
+	background-image: url("/img/selectNum.svg")
+	background-repeat: no-repeat
+	background-position: 28px center
+	color: $white
+	border: 4px solid $white
+	border-radius: 24px
+	width: 60px
+	height: 50px
+	padding-left: 6px
+	appearance: none
+
+.selectNum option
+	color: $black
+
+.inputNum
+	background: none
+	color: $white
+	border: 4px solid $white
+	border-radius: 25px
+	width: 50px
+	height: 50px
+	text-align: center
+	appearance: none		
+
+.inputNum::-webkit-outer-spin-button,
+.inputNum::-webkit-inner-spin-button 
+	appearance: none
+
+.inputNum:hover,
+.inputNum:focus 
+	appearance: none
+	appearance: none
+	appearance: textfield
+
+.total
+	position: relative
+	margin-right: 10px
+
+.total--crossed::after
+	background-image: url("/img/overline.png")
+	background-repeat: no-repeat
+	background-size: contain
+	transform: rotate(-10deg)
+	content: ""
+	position: absolute
+	top: 7px
+	left: 0
+	width: 105%
+	height: 100%
+
+.foodSlider 
+	position: absolute
+	display: flex
+
+
+.foodSlider__item
+	margin-right: 300px	
+	width: 420px
+	position: relative
+	z-index: 1
+	cursor: grab
+
+.foodSlider__item figcaption
+	display: none
+
+.foodSlider__item::before
+	background-color: rgba(0, 0, 0, 0.7)
+	position: absolute
+	content: ""
+	top: 0
+	left: 0
+	height: 308px
+	width: 420px	
+
+.foodSlider__item--current figcaption
+	display: block
+
+.foodSlider__item--current::before	
+	background: none
+
+.foodSlider__item::last-child
+	margin-right: 0	
+
+.foodSlider__wrap
+	position: relative
+	width: 408px
+	height: 350px
+	margin: 0 auto
+	left: 0
+	right: 0
+
+.foodSlider__nav
+	display: flex
+	position: absolute
+	justify-content: space-between
+	align-items: center
+	margin: 0 auto
+	left: 0
+	right: 0 
+	width: 600px
+	height: 308px
+	z-index: 1
+
+.foodSlider__sign 
+	padding-top: 20px
+
+.foodSlider__button
+	background: none
+	height: 48px
+	width: 30px
+	padding: 0
+	cursor: pointer
+
+.foodSlider__arrow--right
+	transform: rotate(180deg)
+
+.radioButtons__wrap
+	cursor: pointer
+	margin-right: 20px
+
+.radioButtons__input
+	appearance: none
+	border-radius: 50%
+	width: 22px
+	height: 22px
+	border: 1px solid $white
+	position: relative
+	top: 4px
+	margin-right: 0
+	cursor: pointer
+
+.radioButtons__label
+	cursor: pointer	
+
+.radioButtons__input:checked 
+	background-image: url("/img/dot.svg")
+	background-repeat: no-repeat
+	background-position: center
+
+.reviewsCarousel
+	display: flex
+	position: absolute
+
+.reviewsCarousel__item
+	margin-right: 100px	
+	width: 374px
+	position: relative
+	cursor: grab
+
+.reviewsCarousel__item::before
+	background-color: rgba(255, 255, 255, 0.7)
+	position: absolute
+	content: ""
+	top: 0
+	left: 0
+	width: 374px
+	height: 735px
+
+.reviewsCarousel__item--current::before
+	background: none
+
+.reviewsCarousel__wrap
+	position: relative
+	width: 374px
+	height: 735px
+	margin: 0 auto
+	left: 0
+	right: 0
+
+.socialNetworksList
+	display: flex
+	width: 130px
+	justify-content: space-between	
+
+
+
+.questionList
+	background-image: url("/img/board.png")
+	background-repeat: no-repeat 
+	width: 495px	
+	min-height: 687px
+	padding-top: 50px
+	padding-left: 50px
+
+.questionList__item
+	width: 390px	
+	margin-bottom: 15px
+	position: relative
+
+.questionList__question
+	position: relative
+	z-index: 1
+	cursor: pointer
+	border-bottom: 2px solid $black
+
+.questionList__answer
+	display: none	
+
+.questionList__triangle
+	position: absolute
+	top: 0
+	right: 0
+
+.questionList__answer--open
+	display: block
+
+.questionList__triangle--open
+	transform: rotate(90deg)
