@@ -20,25 +20,52 @@
 	position: absolute
 	display: flex
 	align-items: center
+	justify-content: space-between
 	left: 0
 	right: 0
+	top: 16px
+	z-index: 1
 
 .header__city 
 	margin-right: 30px
+	@media screen and (max-width: $xlSize)
+		margin-right: 20px
+	@media screen and (max-width: $mSize)
+		display: none		
 
 .header__logo
 	margin-right: 90px
+	@media screen and (max-width: $xlSize)
+		margin-right: 10px
+
 
 .header__navigation
 	margin-right: 60px
+	@media screen and (max-width: $xlSize)	
+		width:28px
+		height: 20px
+		order: 3
+		margin-right: 0
+
+.header__links		
+	@media screen and (max-width: $xlSize)
+		display: none	
+
+.header__phone
+	@media screen and (max-width: $mSize)
+		display: none
+	
+.heroScreen__textBlock
+	z-index: 1
 
 .heroScreen__wrap
+	position: relative
 	width: 100%
 	background-repeat: repeat-x
-	background-position: center
+	background-position: top
 	background-image: url("/img/bg1stScreen.png")
 	overflow-x: hidden
-	min-height: 900px
+	min-height: 1020px
 	margin-bottom: 70px
 
 .heroScreen 
@@ -50,11 +77,16 @@
 	left: 0
 	width: 100%
 	min-width: 1300px
+	@media screen and (max-width: $mSize)
+		min-width: 1160px
+	@media screen and (max-width: $sSize)
+		min-width: 900px	
 
 .heroScreen__img
 	margin-top: -60px
 	margin-right: 0
 	margin-left: auto
+
 
 .heroScreen__title
 	max-width: 630px
@@ -78,11 +110,11 @@
 	top: 0
 
 .howItWork__img--right
-	min-width: 1300px
+	min-width: 800px
 	left: 0
 
 .howItWork__img--left
-	min-width: 1300px
+	min-width: 800px
 	right: 0
 
 .howItWork__img--left::before
@@ -112,6 +144,9 @@
 
 .howItWork__stages
 	margin-left: 410px
+	@media screen and (max-width: $xlSize)
+		margin-left: auto
+		margin-right: auto
 
 .aboutUs__wrap	
 	background-image: url("/img/bg3rdScreen.png")
@@ -120,13 +155,18 @@
 	background-repeat: repeat-x
 	padding-top: 40px
 	margin-bottom: -240px
-	min-height: 840px
+	min-height: 900px
 	position: relative
 	overflow-x: hidden
+	@media screen and (max-width: $mSize)
+		background-position: right top
 
 .aboutUs
 	padding-left: 115px
 	position: relative
+	z-index: 1
+	@media screen and (max-width: $mSize)
+		padding-left: 50px
 
 .aboutUs__imgCook
 	width: 100%
@@ -144,13 +184,27 @@
 	display: block
 	width:	426px
 	height: 432px
+	@media screen and (max-width: $lSize)
+		left: 410px
+	@media screen and (max-width: $mSize)
+		display: none
 
 .aboutUs__img
 	width: 100%
-	min-width: 1600px
+	min-width: 1390px
 	position: absolute
 	left: 0
 	top: 0
+	@media screen and (max-width: $xlSize)
+		min-width: 1490px
+	@media screen and (max-width: $lSize)
+		display: none
+	@media screen and (max-width: $mSize)
+		min-width: 630px
+		display: block	
+	@media screen and (max-width: $sSize)
+		min-width: 530px
+		display: block		
 
 .aboutUs__img::after
 	background-image: url("/img/cornPan.png"), url("/img/spoonWithSpice.png") 
@@ -162,7 +216,7 @@
 	right: 0
 	display: block
 	width:	700px
-	height: 840px		
+	height: 900px		
 
 .aboutUs__title
 	padding-bottom: 50px	
@@ -171,6 +225,9 @@
 	text-align: center
 	position: relative
 	min-height: 600px
+
+
+
 
 .aboutMenu::after
 	background-image: url("/img/woman.png")
@@ -186,14 +243,19 @@
 	display: block
 	width:	700px
 	height: 556px	
+	@media screen and (max-width: $lSize)
+		display: none	
 
 .aboutMenu__title
 	margin-bottom: 150px
+	@media screen and (max-width: $lSize)
+		margin-bottom: 50px
 
 
 .aboutMenu__list
 	width: 100%	
 	margin: 0 auto
+
 
 .aboutMenu__Wrap
 	width: 100%
@@ -207,12 +269,19 @@
 
 .aboutMenu__img
 	width: 100%
-	min-width: 1300px
+	min-width: 1300px	
+	@media screen and (max-width: $xlSize)
+		min-width: 1050px
+	@media screen and (max-width: $lSize)
+		min-width: 800px	
 
 .aboutMenu__img--left
 	right: 0
 	top: 0
 	position: absolute
+	@media screen and (max-width: $mSize)
+		min-width: 500px		
+	
 
 .aboutMenu__img--left::after
 	background-image: url("/img/tomatoes.png")
@@ -233,6 +302,10 @@
 	top: 0
 	z-index: 1
 	position: absolute
+	@media screen and (max-width: $sSize)
+		min-width: 675px
+	@media screen and (max-width: $xsSize)
+		min-width: 585px			
 
 .aboutMenu__img--right::after
 	background-image: url("/img/spiceBoard.png")
@@ -251,12 +324,16 @@
 .foodGallery
 	text-align: center
 	background-image: url("/img/bg5thScreen.jpg")	
-	background-repeat: no-repeat	
+	background-repeat: repeat-x
 	padding-top: 60px
 	position: relative
 	padding-bottom: 100px
 	margin-bottom: 80px
 	overflow-x: hidden
+	@media screen and (max-width: $sSize)
+			bottom: 0
+			padding-bottom: 200px
+			background-image: url("/img/bg5thScreenRotate.jpg")			
 
 .foodGallery__nav
 	top: 0
@@ -326,13 +403,26 @@
 	padding-top: 80px
 	padding-left: 300px
 	padding-bottom: 80px
+	@media screen and (max-width: $mSize)
+		padding-left: 200px
+	@media screen and (max-width: $sSize)
+		padding-left: 100px
+	@media screen and (max-width: $xsSize)
+		padding-left: 30px
 
 .captionForm__img--top
 	position: absolute
 	right: 0
 	top: 0
 	width: 100%
-	min-width: 1300px
+	min-width: 800px
+	@media screen and (max-width: $mSize)
+		min-width: 0
+	@media screen and (max-width: $sSize)
+		min-width: 520px
+	@media screen and (max-width: $xsSize)
+		min-width: 500px		
+				
 
 .captionForm__img--top::after
 	background-image: url("/img/spoon&Bowl.png")
@@ -341,6 +431,7 @@
 	position: absolute
 	left: 0
 	top: 0
+	z-index: 1
 	content: ""
 	display: block
 	width: 200px
@@ -350,8 +441,17 @@
 	position: absolute
 	right: 0
 	top: 415px
+	z-index: 1
 	width: 100%
-	min-width: 1300px
+	min-width: 800px
+	@media screen and (max-width: $mSize)
+		min-width: 630px
+	@media screen and (max-width: $sSize)
+		min-width: 600px	
+	@media screen and (max-width: $xsSize)
+		min-width: 500px		
+		
+
 
 .captionForm__img--bottom::after
 	background-image: url("/img/sandwich.png")
@@ -369,8 +469,14 @@
 	position: absolute
 	left: 0
 	top: 0
+	z-index: 1
 	width: 100%
-	min-width: 1300px
+	min-width: 1200px
+	@media screen and (max-width: $mSize)
+		min-width: 1100px
+	@media screen and (max-width: $sSize)
+		display: none	
+
 
 .captionForm__img--right::after
 	background-image: url("/img/pasta.png")
@@ -389,9 +495,13 @@
 	padding-top: 65px
 	padding-bottom: 90px
 	position: relative
-	z-index: -1
+	z-index: 0
 	width: 100%
 	overflow-x: hidden
+	@media screen and (max-width: $lSize)
+		padding-bottom: 280px
+	@media screen and (max-width: $sSize)	
+		padding-bottom: 240px		
 
 .FAQ__list
 	margin: 0 auto	
@@ -400,12 +510,32 @@
 	display: block
 	margin: 0 auto	
 
+.FAQ__bg
+	background-image: url("/img/board.png")
+	background-repeat: no-repeat
+	background-position: center
+	position: absolute
+	right: 0
+	left: 0
+	top: 50px
+	margin-left: auto
+	margin-right: auto
+	content: ""
+	display: block
+	width: 495px
+	height: 687px
+	z-index: 0	
+
+
 .FAQ__img--right
 	position: absolute
 	left: 0
 	top: 0
 	width: 100%
-	min-width: 1300px
+	min-width: 1100px
+	@media screen and (max-width: $mSize)
+		min-width: 1000px
+
 
 .FAQ__img--right::after
 	background-image: url("/img/grill.png")
@@ -425,6 +555,8 @@
 	bottom: 0
 	width: 100%
 	min-width: 1300px
+	@media screen and (max-width: $xlSize)
+		min-width: 1100px
 
 .FAQ__img--bottom::after
 	background-image: url("/img/mushroomPeace.png")
@@ -444,6 +576,8 @@
 	bottom: 100px
 	width: 100%
 	min-width: 1300px
+	@media screen and (max-width: $xlSize)
+		min-width: 1000px
 
 .FAQ__img--top::after
 	background-image: url("/img/mushroomBig.png")
@@ -469,6 +603,17 @@
 	top: -80px
 	left: 0
 	right: 0
+	@media screen and (max-width: $lSize)
+		flex-direction: column
+		top: -240px
+		height: 200px
+	@media screen and (max-width: $sSize)	
+		top: -200px
+		height: 160px
+
+.footer__navigation 
+	@media screen and (max-width: $sSize)
+		display: none
 
 .footer_copyright	
 	text-align: center
@@ -476,3 +621,5 @@
 	top: -20px
 	left: 0
 	right: 0
+	@media screen and (max-width: $lSize)
+		top: -30px

@@ -11,28 +11,34 @@
 		<a href="/" class="header__logo logo">
 			<img src="/img/logo.svg" alt="MyFood — logo" width="62" height="58">
 		</a>
-		<select name="city" id="selectCity" class="header__city selectCity">
+		<select name="city" id="selectCity" class="smallText header__city selectCity">
   			<option value="Moscow">Москва</option>
   			<option value="RostovOnDon">Ростов-на-Дону</option>
   			<option value="SaintPetersburg">Санкт-Петербруг</option>
 		</select>
 		<nav class="header__navigation">
-		<ul class="mainNavigation">
+		<button class="burgerMenu" id="burgerMenu"  aria-label="open menu">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<ul class="header__links mainNavigation">
 			<li class="mainNavigation__item">
-				<a href="#" class="link link--white">Вопросы-ответы</a>
+				<a href="#" class="smallText link link--white">Вопросы-ответы</a>
 			</li>
 			<li class="mainNavigation__item">
-				<a href="#" class="link link--white">Преимущества</a>
+				<a href="#" class="smallText link link--white">Преимущества</a>
 			</li>
 			<li class="mainNavigation__item">
-				<a href="#" class="link link--white">О нас</a>
+				<a href="#" class="smallText link link--white">О нас</a>
 			</li>
 			<li class="mainNavigation__item">
-				<a href="#" class="link link--white">Контакты</a>
+				<a href="#" class="smallText link link--white">Контакты</a>
 			</li>
 		</ul>	
 		</nav>
-		<a href="tel:+89899744538" class="link link--white">8 (989) 974-45-38</a>
+		<a href="tel:+89899744538" class="smallText header__phone link link--white">8 (989) 974-45-38</a>
 	</header>
 	<main>
 		<div class="heroScreen__wrap">
@@ -212,6 +218,7 @@
 		</section>
 		<section class="reviews">
 			<h2 class="reviews__title title">Отзывы наших клиентов</h2>
+			<div class="swipeIcon"></div>
 			<div class="reviews__carousel reviewsCarousel__wrap">
 				<ul class="reviewsCarousel">
 					<li class="reviewsCarousel__item reviewsCarousel__item--current" >
@@ -309,59 +316,76 @@
 			<h2 class="hidden">Часто задаваемыfе вопросы</h2>
 			<ul class="FAQ__list questionList">
 				<li class="questionList__item">
-					<h3 class="questionList__question sign">Где узнать КБЖУ каждого блюда</h3>
-					<svg width="15" height="15" class="questionList__triangle">
-						<use xlink:href="/img/sprite.svg#triangle"></use>
-					</svg>	
+					<div class="questionList__question">
+						<h3 class="sign">Где узнать КБЖУ каждого блюда</h3>
+						<svg width="15" height="15" class="questionList__triangle">
+							<use xlink:href="/img/sprite.svg#triangle"></use>
+						</svg>	
+					</div>	
 					<p class="questionList__answer text">В твоей доставке обязательно будет бумажное меню с указанием КБЖУ каждого блюда. Также, эту информацию ты можешь найти на пленке вместе с подробным составом.</p>
 				</li>
 				<li class="questionList__item">
-					<h3 class="questionList__question sign">Почему доставка только утром?</h3>
-					<svg width="15" height="15" class="questionList__triangle">
-						<use xlink:href="/img/sprite.svg#triangle"></use>
-					</svg>	
+					<div class="questionList__question">
+						<h3 class="sign">Почему доставка только утром?</h3>
+						<svg width="15" height="15" class="questionList__triangle">
+							<use xlink:href="/img/sprite.svg#triangle"></use>
+						</svg>
+					</div>		
 					<p class="questionList__answer text">Все блюда готовятся в ночь перед доставкой, поэтому утром к тебе приезжает свежая и вкусная еда.</p>
 				</li>				
 				<li class="questionList__item">
-					<h3 class="questionList__question sign">Как часто повторяется меню</h3>
-					<svg width="15" height="15" class="questionList__triangle">
-						<use xlink:href="/img/sprite.svg#triangle"></use>
-					</svg>	
-					<p class="questionList__answer text">Меню не повторяется в течение 30 дней. Каждая доставка — новые блюда. Мы ежемесячно обновляем меню и регулярно добавляем новинки.</p>
+					<div class="questionList__question">
+						<h3 class="sign">Как часто повторяется меню</h3>
+						<svg width="15" height="15" class="questionList__triangle">
+							<use xlink:href="/img/sprite.svg#triangle"></use>
+						</svg>	
+						<p class="questionList__answer text">Меню не повторяется в течение 30 дней. Каждая доставка — новые блюда. Мы ежемесячно обновляем меню и регулярно добавляем новинки.</p>
+					</div>	
 				</li>
 				<li class="questionList__item">
-					<h3 class="questionList__question sign">Сколько хранится еда?</h3>
-					<svg width="15" height="15" class="questionList__triangle questionList__triangle--open">
-						<use xlink:href="/img/sprite.svg#triangle"></use>
-					</svg>	
+					<div class="questionList__question">
+						<h3 class="sign">Сколько хранится еда?		
+						</h3>
+						<svg width="15" height="15" class="questionList__triangle questionList__triangle--open">
+							<use xlink:href="/img/sprite.svg#triangle"></use>
+						</svg>						
+					</div>
 					<p class="questionList__answer questionList__answer--open text">Сразу после получения коробки от курьера, ее нужно разобрать и убрать все контейнеры в холодильник. Там их и хранить. В таком случае сохранится полный срок годности — от 72 часов</p>
 				</li>
 				<li class="questionList__item">
-					<h3 class="questionList__question sign">Есть ли заморозка дней?</h3>
-					<svg width="15" height="15" class="questionList__triangle">
-						<use xlink:href="/img/sprite.svg#triangle"></use>
-					</svg>	
+					<div class="questionList__question">
+						<h3 class="sign">Есть ли заморозка дней?</h3>
+						<svg width="15" height="15" class="questionList__triangle">
+							<use xlink:href="/img/sprite.svg#triangle"></use>
+						</svg>
+					</div>	
 					<p class="questionList__answer text">
 					Есть. Ты всегда можешь перенести свой заказ. Для этого воспользуйся «заморозкой». До 12:00 за день до доставки внеси изменения в заказ в личном кабинете или с менеджером по телефону.</p>
 				</li>													
 				<li class="questionList__item">
-					<h3 class="questionList__question sign">Можно ли разогревать в СВЧ?</h3>
-					<svg width="15" height="15" class="questionList__triangle">
-						<use xlink:href="/img/sprite.svg#triangle"></use>
-					</svg>						
+					<div class="questionList__question">
+						<h3 class="sign">Можно ли разогревать в СВЧ?</h3>
+						<svg width="15" height="15" class="questionList__triangle">
+							<use xlink:href="/img/sprite.svg#triangle"></use>
+						</svg>	
+					</div>						
 					<p class="questionList__answer text">Разогреть еду можно в микроволновке, надрезав или сняв пленку. Мы используем пищевые боксы, которые предназначены для разогрева в СВЧ-печи.</p>
 				</li>
 				<li class="questionList__item">
-					<h3 class="questionList__question sign">Где вы все это готовите?</h3>
-					<svg width="15" height="15" class="questionList__triangle">
-						<use xlink:href="/img/sprite.svg#triangle"></use>
-					</svg>	
+					<div class="questionList__question">
+						<h3 class="sign">Где вы все это готовите?</h3>
+						<svg width="15" height="15" class="questionList__triangle">
+							<use xlink:href="/img/sprite.svg#triangle"></use>
+						</svg>	
+					</div>	
 					<p class="questionList__answer text">У нас собственное производство с «умным» оборудованием. Придумано человеком, идеально исполнено роботом! </p>
-				</li>													
+				</li>												
 			</ul>
+			<div class="FAQ__bg"></div>
 			<button class="FAQ__btn btn">
 				<span>Задать вопрос</span>
 			</button>
+			<div class="FAQ__bg"></div>
 			<div class="FAQ__img--top"></div>	
 			<div class="FAQ__img--bottom"></div>
 			<div class="FAQ__img--right"></div>		

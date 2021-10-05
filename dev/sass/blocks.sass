@@ -8,21 +8,38 @@
 	font-size: 96px
 	color: $red
 	text-shadow: 1px 0 0
+	@media screen and (max-width: $xlSize)
+		font-size: 76px
+	@media screen and (max-width: $lSize)
+		font-size: 56px	
+	@media screen and (max-width: $sSize)
+		font-size: 36px		
+
+.heroTitle br		
+	display: none
 
 .subtitle
 	font-family: $text
 	font-size: 24px
 	font-weight: 700	
 
+
 .title
 	font-family: $text
 	font-size: 40px
 	font-weight: 900
+	@media screen and (max-width: $sSize)
+		font-size: 28px
+
+.smallText
+	font-size: 16px
 
 .sign
 	font-family: $text
 	font-size: 20px
 	font-weight: 700	
+	@media screen and (max-width: $sSize)
+		font-size: 18px	
 
 .copyright
 	font-family: $text
@@ -62,6 +79,8 @@
 
 .mainNavigation__item
 	margin-right: 33px
+	@media screen and (max-width: $xlSize)
+		margin-right: 15px
 
 .mainNavigation__item:last-child
 	margin-right: 0
@@ -92,13 +111,33 @@
 	font-size: 40px
 	font-weight: 500
 	position: relative
+	@media screen and (max-width: $xlSize)
+		margin-bottom:0
+		flex-direction: column
+		align-items: center
+		width: 230px
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 40px
+
+.stagesList__item:nth-child(4)
+	@media screen and (max-width: $xlSize)
+		margin-bottom: 80px	
 
 .stagesList__num
 	position: absolute
 	left: 0 
 	top: 50px	
 	font-size: 18px
-	font-weight: 700	
+	font-weight: 700
+	@media screen and (max-width: $xlSize)
+		top: 30px
+		left: 60px 
+
+.stagesList__item--fifth .stagesList__num
+	@media screen and (max-width: $xlSize)
+		top: 70px	
+		left: 40px 		
 
 .stagesList__item--first::before
 	background-image: url("/img/1stStep.png"), url("/img/ellipse.svg")
@@ -122,6 +161,8 @@
 
 .stagesList__item--second
 	margin-left: 200px
+	@media screen and (max-width: $xlSize)
+		margin-left: auto
 
 .stagesList__item--second::before	
 	background-image: url("/img/2ndStep.png"), url("/img/ellipse.svg")
@@ -140,19 +181,21 @@
 	display: block
 	width: 120px
 	height: 160px	
-	top: 160px
-	left: 90px	
+	top: 155px
+	left: 108px
 
 .stagesList__item--third
-	margin-left: 400px
+	margin-left: 370px
+	@media screen and (max-width: $xlSize)
+		margin-left: auto
 
 .stagesList__item--third::before	
 	background-image: url("/img/3rdStep.png"), url("/img/ellipse.svg")
 	background-repeat: no-repeat
-	background-position: 4px 3px, center bottom
+	background-position: 14px 3px, center bottom
 	content: ""
 	display: block
-	width: 140px
+	width: 160px
 	height: 160px	
 
 .stagesList__item--third::after
@@ -164,11 +207,13 @@
 	width: 120px
 	height: 160px
 	top: 150px
-	left: -90px	
+	left: -85px	
 
 
 .stagesList__item--fourth
 	margin-left: 200px
+	@media screen and (max-width: $xlSize)
+		margin-left: auto
 
 .stagesList__item--fourth::before	
 	background-image: url("/img/4thStep.png"), url("/img/ellipse.svg")
@@ -200,6 +245,29 @@
 	width: 220px
 	height: 302px
 
+.stagesList__item::after
+	@media screen and (max-width: $xlSize)
+		background-image: url("/img/path.svg")
+		background-repeat: no-repeat
+		content: ""
+		position: absolute
+		top: 270px
+		left: 0
+		right: 0
+		display: block
+		width: 4px
+		height: 54px	
+		margin: auto
+
+.stagesList__item:last-child::after
+	@media screen and (max-width: $xlSize)
+		display: none
+
+
+.stagesList__item::before
+	@media screen and (max-width: $xlSize)
+		position: static
+
 .advantagesList__item
 	position: relative
 
@@ -217,7 +285,9 @@
 .stagesList__text
 	width: 340px
 	padding-left: 10px
-	text-align: left	
+	text-align: left
+	@media screen and (max-width: $xlSize)	
+		text-align: center	
 
 .advantagesList__title
 	margin-bottom: 10px
@@ -230,9 +300,14 @@
 .MenuList
 	display: flex
 	justify-content: space-between
+	@media screen and (max-width: $lSize)
+		flex-direction: column
+		align-items: center
 	
 .MenuList__item
 	max-width: 400px
+	@media screen and (max-width: $lSize)
+	margin-bottom: 50px
 
 .radioButtons
 	display: flex
@@ -302,16 +377,24 @@
 	position: absolute
 	display: flex
 
-
 .foodSlider__item
 	margin-right: 300px	
 	width: 420px
 	position: relative
 	z-index: 1
 	cursor: grab
+	@media screen and (max-width: $sSize)
+		margin-right: 50px	
+		width: 308px
+
 
 .foodSlider__item figcaption
 	display: none
+
+.foodSlider__item img	
+	@media screen and (max-width: $sSize)
+		max-width: 420px
+		transform: translateY(40px) translateX(-55px) rotate(90deg)
 
 .foodSlider__item::before
 	background-color: rgba(0, 0, 0, 0.7)
@@ -320,7 +403,9 @@
 	top: 0
 	left: 0
 	height: 308px
-	width: 420px	
+	width: 420px
+	@media screen and (max-width: $sSize)	
+		transform: translateY(40px) rotate(90deg)
 
 .foodSlider__item--current figcaption
 	display: block
@@ -328,7 +413,7 @@
 .foodSlider__item--current::before	
 	background: none
 
-.foodSlider__item::last-child
+.foodSlider__item:last-child
 	margin-right: 0	
 
 .foodSlider__wrap
@@ -338,6 +423,8 @@
 	margin: 0 auto
 	left: 0
 	right: 0
+	@media screen and (max-width: $sSize)
+		width: 308px
 
 .foodSlider__nav
 	display: flex
@@ -350,9 +437,17 @@
 	width: 600px
 	height: 308px
 	z-index: 1
+	@media screen and (max-width: $mSize)
+		width: 530px
+	@media screen and (max-width: $sSize)
+		width: 100px
+		height: 53px
+		bottom: 20px
 
 .foodSlider__sign 
 	padding-top: 20px
+	@media screen and (max-width: $sSize)	
+		padding-top: 110px
 
 .foodSlider__button
 	background: none
@@ -425,20 +520,29 @@
 
 
 .questionList
-	background-image: url("/img/board.png")
-	background-repeat: no-repeat 
 	width: 495px	
 	min-height: 687px
 	padding-top: 50px
 	padding-left: 50px
+	@media screen and (max-width: $sSize)
+		padding-left: 50px
+		max-width: 495px
+		width: 100%
 
 .questionList__item
 	width: 390px	
 	margin-bottom: 15px
+	z-index:1
 	position: relative
+	@media screen and (max-width: $sSize)
+		width: 95%
+		max-width: 400px	
 
 .questionList__question
 	position: relative
+	display: flex
+	justify-content: space-between
+	align-items: center
 	z-index: 1
 	cursor: pointer
 	border-bottom: 2px solid $black
@@ -447,12 +551,74 @@
 	display: none	
 
 .questionList__triangle
-	position: absolute
-	top: 0
-	right: 0
 
+	@media screen and (max-width: $sSize)
+		bottom: 4px
+		top: auto
 .questionList__answer--open
 	display: block
 
 .questionList__triangle--open
 	transform: rotate(90deg)
+
+.burgerMenu
+	background: none
+	display: none 
+	cursor: pointer
+	width: 28px
+	height: 20px
+	position: absolute
+	z-index: 12
+	@media screen and (max-width: $xlSize)
+		display: block	
+
+.burgerMenu span 
+	display: block
+	position: absolute
+	height: 4px
+	width: 100%
+	background: $red
+	opacity: 1
+	left: 0
+	transition: .25s ease-in-out
+
+.burgerMenu:hover span 
+	background-color: $hover
+
+.burgerMenu:active span 
+	background-color: $active
+
+.burgerMenu span:nth-child(1) 
+	top: 0px
+
+.burgerMenu span:nth-child(2), .burgerMenu span:nth-child(3) 
+	top: 8px
+
+.burgerMenu span:nth-child(4) 
+	top: 16px
+
+.burgerMenu.openMenu span:nth-child(1) 
+	top: 18px
+	width: 0%
+	left: 50%
+	
+.burgerMenu.openMenu span:nth-child(2) 
+	transform: rotate(45deg)
+
+.burgerMenu.openMenu span:nth-child(3) 
+	transform: rotate(-45deg)
+
+.burgerMenu.openMenu span:nth-child(4) 
+	top: 18px
+	width: 0%
+	left: 50%	
+
+.swipeIcon::after
+	@media screen and (max-width: $sSize)
+		background-image: url("/img/swipe.svg")	
+		background-repeat: no-repeat	
+		display: block
+		content: ""
+		width: 48px
+		margin: 0 auto
+		height: 48px		
