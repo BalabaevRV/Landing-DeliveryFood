@@ -6,6 +6,7 @@
 .heroTitle 
 	font-family: $heroTitle
 	font-size: 96px
+	line-height: 70px
 	color: $red
 	text-shadow: 1px 0 0
 	@media screen and (max-width: $xlSize)
@@ -15,8 +16,8 @@
 	@media screen and (max-width: $sSize)
 		font-size: 36px		
 
-.heroTitle br		
-	display: none
+// .heroTitle br	
+// 	display: none
 
 .subtitle
 	font-family: $text
@@ -108,7 +109,7 @@
 	display: flex
 	align-items: center
 	font-family: $text
-	font-size: 40px
+	font-size: 30px
 	font-weight: 500
 	position: relative
 	@media screen and (max-width: $xlSize)
@@ -126,8 +127,8 @@
 
 .stagesList__num
 	position: absolute
-	left: 0 
-	top: 50px	
+	left: 10px
+	top: 40px	
 	font-size: 18px
 	font-weight: 700
 	@media screen and (max-width: $xlSize)
@@ -156,12 +157,14 @@
 	display: block
 	width: 120px
 	height: 160px
-	top: 160px
-	left: 90px	
+	top: 154px
+	left:109px	
 
 .stagesList__item--second
-	margin-left: 200px
+	margin-left: 213px
+	margin-top: -10px
 	@media screen and (max-width: $xlSize)
+		margin-top: auto
 		margin-left: auto
 
 .stagesList__item--second::before	
@@ -181,12 +184,14 @@
 	display: block
 	width: 120px
 	height: 160px	
-	top: 155px
-	left: 108px
+	top: 150px
+	left: 125px
 
 .stagesList__item--third
-	margin-left: 370px
+	margin-top: -20px
+	margin-left: 420px
 	@media screen and (max-width: $xlSize)
+		margin-top: auto
 		margin-left: auto
 
 .stagesList__item--third::before	
@@ -211,8 +216,10 @@
 
 
 .stagesList__item--fourth
-	margin-left: 200px
+	margin-left: 217px
+	margin-top: -25px
 	@media screen and (max-width: $xlSize)
+		margin-top: auto
 		margin-left: auto
 
 .stagesList__item--fourth::before	
@@ -232,8 +239,15 @@
 	display: block
 	width: 120px
 	height: 160px	
-	top: 170px
-	left: -10px	
+	top: 160px
+	left: -56px	
+
+.stagesList__item--fifth
+	margin-left: -40px
+	margin-top: -63px
+	@media screen and (max-width: $xlSize)
+		margin-top: auto
+		margin-left: auto	
 
 .stagesList__item--fifth::before	
 	background-image: url("/img/5thStep.png"), url("/img/ellipseMin.svg")
@@ -280,20 +294,23 @@
 	width: 45px
 	height: 42px
 	bottom: 0
-	left: -50px
+	left: -70px
 
 .stagesList__text
 	width: 340px
-	padding-left: 10px
+	padding-left: 27px
+	padding-top: 20px
 	text-align: left
 	@media screen and (max-width: $xlSize)	
+		padding-top: 0
+		padding-left: 0
 		text-align: center	
 
 .advantagesList__title
 	margin-bottom: 10px
 
 .advantagesList__text
-	margin-bottom: 40px	
+	margin-bottom: 60px	
 	max-width: 430px
 
 
@@ -316,10 +333,13 @@
 	margin-bottom: 20px
 
 .captionForm__input
-	margin-bottom: 20px
+	margin-bottom: 10px
+
+.captionForm__input:nth-child(3)
+	margin-bottom: 25px	
 
 .captionForm__paragraph	
-	margin-bottom: 20px	
+	margin-bottom: 48px	
 
 .selectNum
 	background: none
@@ -434,7 +454,7 @@
 	margin: 0 auto
 	left: 0
 	right: 0 
-	width: 600px
+	width: 700px
 	height: 308px
 	z-index: 1
 	@media screen and (max-width: $mSize)
@@ -445,7 +465,7 @@
 		bottom: 20px
 
 .foodSlider__sign 
-	padding-top: 20px
+	padding-top: 7px
 	@media screen and (max-width: $sSize)	
 		padding-top: 110px
 
@@ -461,7 +481,11 @@
 
 .radioButtons__wrap
 	cursor: pointer
-	margin-right: 20px
+	margin-right: 25px
+
+.radioButtons__wrap:last-child
+	cursor: pointer
+	margin-right: 0	
 
 .radioButtons__input
 	appearance: none
@@ -559,7 +583,7 @@
 	display: block
 
 .questionList__triangle--open
-	transform: rotate(90deg)
+	transform: rotate(-90deg)
 
 .burgerMenu
 	background: none
