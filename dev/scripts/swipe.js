@@ -66,20 +66,33 @@ function swipeEnd (event) {
     document.removeEventListener("mousemove", moveAt);
     document.removeEventListener("touchend", swipeEnd);
     document.removeEventListener("mouseup", swipeEnd); 
-
 	if (thisList === reviewsCarousel) {
-		if (distance>distanceReviewSlider) {
-			moveReviewsSlider("right");
-		} else {
-			moveReviewsSlider("left");			
-		}
+		if (doSwipe(distance, distanceReviewSlider, thisList)) {
+			if (distance>distanceReviewSlider) {
+				moveReviewsSlider("right");
+			} else {
+				moveReviewsSlider("left");			
+			};
+		};
 		distanceReviewSlider = reviewSlideWidth*currentReviewSliderIndex;		
 	} else {
-		if (distance>distanceFoodSlider) {
-			moveFoodSlider("right");
-		} else {
-			moveFoodSlider("left");			
-		}
-		distanceFoodSlider = foodSlideWidth*currentFoodSliderIndex;
-	}
+		if (doSwipe(distance, distanceFoodSlider)) {
+			if (distance>distanceFoodSlider) {
+				moveFoodSlider("right");
+			} else {
+				moveFoodSlider("left");			
+			};
+			distanceFoodSlider = foodSlideWidth*currentFoodSliderIndex;
+			};
+		};		
 }    
+
+function doSwipe(distance, currentDistance) {
+	console.log(distance, currentDistance, distance-currentDistance);
+	if (Math.abs(distance-currentDistance)>minDistance) {
+		return true;
+	} else { 
+		thisList.style.transform = `translateX(-${currentDistance}px`;
+		return false;
+	}
+}
