@@ -13,11 +13,10 @@
 		font-size: 76px
 	@media screen and (max-width: $lSize)
 		font-size: 56px	
+		line-height: 56px	
 	@media screen and (max-width: $sSize)
-		font-size: 36px		
-
-// .heroTitle br	
-// 	display: none
+		font-size: 36px	
+		line-height: 36px	
 
 .subtitle
 	font-family: $text
@@ -66,17 +65,36 @@
 	background: none
 	min-width: 310px
 	min-height: 48px
-	background-image: url("/img/bgButton.png")
+	background-image: url("/img/bgButton.png"), url("/img/bgButtonHover.png"), url("/img/bgButtonClick.png") 
+	background-size: auto, 0, 0 
+	padding: 0
 	padding-left: 50px
 	color: $white
 	text-align: left
 	cursor: pointer
+	display: inline-block
+
+.btn--link
+	padding-top: 10px	
+
+.btn:hover	
+	background-image: url("/img/bgButtonHover.png")
+
+.btn:active	
+	background-image: url("/img/bgButtonClick.png")
 
 .btn--order	
 	padding-left: 85px
 
+.btn--FAQ
+	padding-left: 60px	
+
+.btn--close
+	padding-left: 84px
+
 .mainNavigation
 	display: flex
+	transition: right .2s ease-in-out
 
 .mainNavigation__item
 	margin-right: 33px
@@ -105,6 +123,10 @@
 .link--white
 	color: $white	
 
+.link:hover
+	color: $hover
+.link:active
+	color: $active	
 .stagesList__item
 	display: flex
 	align-items: center
@@ -265,13 +287,19 @@
 		background-repeat: no-repeat
 		content: ""
 		position: absolute
-		top: 270px
+		top: 240px
 		left: 0
 		right: 0
 		display: block
 		width: 4px
 		height: 54px	
 		margin: auto
+
+.stagesList__item:nth-child(4)::after
+	@media screen and (max-width: $xlSize)
+		top: 210px	
+	@media screen and (max-width: $xsSize)
+		top: 250px		
 
 .stagesList__item:last-child::after
 	@media screen and (max-width: $xlSize)
@@ -295,6 +323,8 @@
 	height: 42px
 	bottom: 0
 	left: -70px
+	@media screen and (max-width: $mSize)	
+		left: -50px
 
 .stagesList__text
 	width: 340px
@@ -305,6 +335,8 @@
 		padding-top: 0
 		padding-left: 0
 		text-align: center	
+	@media screen and (max-width: $xsSize)
+		width: 300px		
 
 .advantagesList__title
 	margin-bottom: 10px
@@ -396,12 +428,13 @@
 .foodSlider 
 	position: absolute
 	display: flex
+	transition: transform 0.2s ease-in-out
 
 .foodSlider__item
 	margin-right: 300px	
 	width: 420px
 	position: relative
-	z-index: 1
+	z-index: 10
 	cursor: grab
 	@media screen and (max-width: $sSize)
 		margin-right: 50px	
@@ -425,7 +458,8 @@
 	height: 308px
 	width: 420px
 	@media screen and (max-width: $sSize)	
-		transform: translateY(40px) rotate(90deg)
+		z-index: 1
+		transform: translateY(40px) translateX(-55px) rotate(90deg)
 
 .foodSlider__item--current figcaption
 	display: block
@@ -476,8 +510,31 @@
 	padding: 0
 	cursor: pointer
 
-.foodSlider__arrow--right
+.arrow
+	background: url("/img/arrow.png"), url("/img/arrowClick.png"), url("/img/arrowHover.png"), url("/img/arrowDisabled.png") 
+	background-size: auto, 0, 0, 0
+	height: 48px
+	width: 30px
+	padding: 0
+	cursor: pointer	
+
+.arrow:hover
+	background: url("/img/arrowHover.png")
+
+.arrow:active
+	background: url("/img/arrowClick.png")
+
+.arrow--right
 	transform: rotate(180deg)
+
+.arrow--disabled
+	background: url("/img/arrowDisabled.png")
+
+.arrow--disabled:hover
+	background: url("/img/arrowDisabled.png")
+
+.arrow--disabled:active
+	background: url("/img/arrowDisabled.png")	
 
 .radioButtons__wrap
 	cursor: pointer
@@ -509,6 +566,7 @@
 .reviewsCarousel
 	display: flex
 	position: absolute
+	transition: transform 0.2s ease-in-out
 
 .reviewsCarousel__item
 	margin-right: 100px	
@@ -543,10 +601,11 @@
 
 
 
+
 .questionList
 	width: 495px	
 	min-height: 687px
-	padding-top: 50px
+	padding-top: 55px
 	padding-left: 50px
 	@media screen and (max-width: $sSize)
 		padding-left: 50px
@@ -571,10 +630,23 @@
 	cursor: pointer
 	border-bottom: 2px solid $black
 
+.questionList__question:hover
+	color: $hover
+
+.questionList__question:active
+	color: $active	
+
+.questionList__question:focus
+	color: $hover		
+
 .questionList__answer
-	display: none	
+	display: none
+	overflow: hidden
+	height: 0
+	transition: height .2s ease-in-out	
 
 .questionList__triangle
+	transition: transform .25s ease-in-out
 
 	@media screen and (max-width: $sSize)
 		bottom: 4px
@@ -591,8 +663,9 @@
 	cursor: pointer
 	width: 28px
 	height: 20px
-	position: absolute
+	position: relative
 	z-index: 12
+	right: 0
 	@media screen and (max-width: $xlSize)
 		display: block	
 
@@ -604,7 +677,7 @@
 	background: $red
 	opacity: 1
 	left: 0
-	transition: .25s ease-in-out
+	transition: transform .2s ease-in-out
 
 .burgerMenu:hover span 
 	background-color: $hover
@@ -646,3 +719,85 @@
 		width: 48px
 		margin: 0 auto
 		height: 48px		
+
+.popUp
+	transition-property: background-color
+	transition-duration: 0.5s
+	background-color: rgba(0, 0, 0, 0)
+	position: fixed
+	width: 100%
+	height: 100%
+	z-index: 10
+
+.popUp__window
+	transition-property: right
+	transition-duration: 0.3s
+	position: fixed
+	margin: auto
+	display: flex
+	align-items: center
+	justify-content: center
+	left: 0
+	right: -200%
+	top: 0
+	bottom: 0 
+	max-width: 400px
+	max-height: 200px
+	z-index: 20
+	background-color: $white
+	flex-direction: column
+
+.popUp__mobileMenu
+	position: absolute
+	margin: auto
+	right: 0
+	top: 0 
+	width: 90%
+	height: 90%
+	z-index: 20
+	background-color: $white
+
+.popUp__paragraph
+	text-align: center
+	margin-bottom: 20px
+
+.popUp__close
+	border: none
+	background: none
+	position: absolute
+	cursor: pointer
+	z-index: 12
+	width: 28px
+	height: 28px
+	top: 8px
+	right: 8px
+
+.popUp__close span
+	display: block
+	position: absolute
+	height: 4px
+	width: 100%
+	background: $black
+	opacity: 1
+	left: 0
+
+.popUp__close span:nth-child(1) 
+	transform: rotate(45deg)
+
+.popUp__close span:nth-child(2) 
+	transform: rotate(-45deg)	
+
+.popUp__close:hover span 
+	background-color: $hover
+
+.popUp__close:active span 
+	background-color: $active		
+
+.popUp__wrap
+	width: 90%
+	text-align: center
+	margin: auto
+
+.popUp__btn 
+	margin-left: 50px	
+	

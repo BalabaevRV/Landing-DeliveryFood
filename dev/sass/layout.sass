@@ -23,7 +23,9 @@
 	left: 0
 	right: 0
 	top: 16px
-	z-index: 1
+	z-index: 2
+	@media screen and (max-width: $xlSize)
+	justify-content: space-between
 
 .header__city 
 	margin-right: 30px
@@ -40,11 +42,43 @@
 
 .header__navigation
 	margin-right: 60px
+	transition: background-color .2s ease-in-out 
 	@media screen and (max-width: $xlSize)	
 		width:28px
 		height: 20px
 		order: 3
+		display: none
 		margin-right: 0
+
+.header__burgerMenu
+	order: 3
+
+.header__navigation--mobile
+	display: block
+	position: fixed
+	width: 100%
+	height: 100%
+	z-index: 10
+	left: 0
+	top: 0
+
+.mainNavigation--mobile
+	position: fixed
+	background-color: $white
+	background-image: url("/img/logo.png")
+	background-repeat: no-repeat
+	background-position: left 20px
+	display: block	
+	width: 80%
+	top: 0
+	right: -100%
+	margin: 0
+	padding-top: 120px
+	padding-left: 40px
+
+
+.mainNavigation--mobile .mainNavigation__item	
+	margin-bottom: 20px	
 
 .header__links		
 	@media screen and (max-width: $xlSize)
@@ -53,9 +87,12 @@
 .header__phone
 	@media screen and (max-width: $mSize)
 		display: none
+
 	
 .heroScreen__textBlock
 	z-index: 1
+	@media screen and (max-width: $sSize)
+		padding-top: 140px
 
 .heroScreen__wrap
 	position: relative
@@ -66,10 +103,15 @@
 	overflow-x: hidden
 	min-height: 1040px
 	margin-bottom: -90px
+	@media screen and (max-width: $mSize)
+		margin-bottom: -190px
+		background-position: center -100px
 
 .heroScreen 
 	padding-top: 220px
 	display: flex
+	@media screen and (max-width: $mSize)
+		padding-top: 120px
 
 .heroScreen__imgBlock
 	position: absolute
@@ -79,7 +121,7 @@
 	@media screen and (max-width: $mSize)
 		min-width: 1160px
 	@media screen and (max-width: $sSize)
-		min-width: 900px	
+		min-width: 1010px	
 
 .heroScreen__img
 	margin-top: -105px
@@ -91,6 +133,11 @@
 	max-width: 630px
 	margin-bottom: 48px
 
+.heroScreen__title br	
+	@media screen and (max-width: $lSize)	
+		display: none
+
+
 .heroScreen__subTitle
 	max-width: 405px
 	margin-bottom: 40px
@@ -100,6 +147,8 @@
 	position: relative
 	overflow-x: hidden
 	margin-bottom: 100px
+	@media screen and (max-width: $xlSize)	
+		margin-bottom: 50px
 
 .howItWork__img
 	width: 100%
@@ -200,10 +249,10 @@
 	@media screen and (max-width: $lSize)
 		display: none
 	@media screen and (max-width: $mSize)
-		min-width: 630px
+		min-width: 720px
 		display: block	
 	@media screen and (max-width: $sSize)
-		min-width: 530px
+		min-width: 630px
 		display: block		
 
 .aboutUs__img::after
@@ -250,6 +299,8 @@
 	margin-bottom: 128px
 	@media screen and (max-width: $lSize)
 		margin-bottom: 50px
+	@media screen and (max-width: $mSize)
+		margin-bottom: 100px	
 
 
 .aboutMenu__list
@@ -281,6 +332,10 @@
 	right: 0
 	top: 0
 	position: absolute
+	@media screen and (max-width: $xlSize)	
+		min-width: 1150px
+	@media screen and (max-width: $lSize)
+		min-width: 800px	
 	@media screen and (max-width: $mSize)
 		min-width: 500px		
 	
@@ -321,7 +376,9 @@
 	margin-left: auto
 	display: block
 	width:	700px
-	height: 676px	
+	height: 676px
+	@media screen and (max-width: $xlSize)	
+		top: 200px
 
 .foodGallery
 	text-align: center
@@ -363,9 +420,13 @@
 
 .reviews__title	
 	margin-bottom: 70px
+	@media screen and (max-width: $sSize)
+		margin-bottom: 30px
 
 .reviews__socialNetworks
 	margin: 0 auto
+	position: relative
+	z-index: 1
 
 .reviews__carousel
 	margin-bottom: 23px	
@@ -396,6 +457,22 @@
 	
 .captionForm__title
 	margin-bottom: 30px	
+	@media screen and (max-width: $sSize)
+		width: 90%
+		margin-left: auto
+		margin-right: auto
+
+.captionForm__form
+	position: relative
+	z-index: 2
+	@media screen and (max-width: $sSize)
+		width: 90%
+		margin-left: auto
+		margin-right: auto
+
+.orderForm__radioButtons
+	@media screen and (max-width: $sSize)
+		flex-direction: column	
 
 .captionForm__wrap
 	background-image: url("/img/bg7thScreen.png")
@@ -405,10 +482,12 @@
 	padding-top: 63px
 	padding-left: 300px
 	padding-bottom: 80px
+	@media screen and (max-width: $lSize)
+		padding-left: 160px
 	@media screen and (max-width: $mSize)
-		padding-left: 200px
-	@media screen and (max-width: $sSize)
 		padding-left: 100px
+	@media screen and (max-width: $sSize)
+		padding-left: 25px
 	@media screen and (max-width: $xsSize)
 		padding-left: 30px
 
@@ -421,7 +500,7 @@
 	@media screen and (max-width: $mSize)
 		min-width: 0
 	@media screen and (max-width: $sSize)
-		min-width: 520px
+		min-width: 630px
 	@media screen and (max-width: $xsSize)
 		min-width: 500px		
 				
@@ -447,9 +526,7 @@
 	width: 100%
 	min-width: 800px
 	@media screen and (max-width: $mSize)
-		min-width: 630px
-	@media screen and (max-width: $sSize)
-		min-width: 600px	
+		min-width: 660px
 	@media screen and (max-width: $xsSize)
 		min-width: 500px		
 		
@@ -497,7 +574,6 @@
 	padding-top: 65px
 	padding-bottom: 90px
 	position: relative
-	z-index: 0
 	width: 100%
 	overflow-x: hidden
 	@media screen and (max-width: $lSize)
@@ -508,21 +584,28 @@
 .FAQ__list
 	margin: 0 auto	
 	margin-bottom: 33px
+	position: relative
+	z-index: 3
 
 .FAQ__btn
 	display: block
 	margin: 0 auto	
+	transform: translateX(30px)
+
+.FAQ__bgWrap
+	height: 687px
+	width: 100%
+	position: absolute
+	display: flex
+	justify-content: center
+	overflow-x: hidden
+	top: 50px
 
 .FAQ__bg
 	background-image: url("/img/board.png")
 	background-repeat: no-repeat
 	background-position: center
 	position: absolute
-	right: 0
-	left: 0
-	top: 50px
-	margin-left: auto
-	margin-right: auto
 	content: ""
 	display: block
 	width: 495px
@@ -614,10 +697,6 @@
 		top: -200px
 		height: 160px
 
-.footer__navigation 
-	@media screen and (max-width: $sSize)
-		display: none
-
 .footer__copyright	
 	text-align: center
 	position: absolute
@@ -629,6 +708,30 @@
 
 .footer__logo
 	margin-left: 95px
+	@media screen and (max-width: $lSize)
+		margin-left: 0
 
-.footer__navigation
-	margin-left: 30px	
+.footer__navigation 
+	margin-left: 30px
+	@media screen and (max-width: $lSize)
+		margin-left: 0
+	@media screen and (max-width: $sSize)
+		display: none		
+
+.header__links--mobile
+	position: fixed
+	background-color: $black
+	background-image: url("/img/logo.svg")
+	background-repeat: no-repeat
+	background-position: 40px 20px
+	display: block	
+	width: 80%
+	top: 0
+	right: -100%
+	margin: 0
+	padding-top: 100px
+	padding-left: 40px
+
+
+.header__links--mobile .mainNavigation__item 
+	margin-bottom: 20px	
