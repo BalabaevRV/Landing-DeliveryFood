@@ -45,6 +45,15 @@ const styles = () => {
         .pipe(dest("dev/css/"))
 }
 
+const scripts = () => {
+    return  src ("dev/scripts/*.js")
+        .pipe(sourcemaps.init("."))
+        .pipe(uglify()) 
+        .pipe(concat("app.js"))
+        .pipe(sourcemaps.write("."))
+        .pipe(dest("dev/js/"))
+}
+
 const server = () => {
     browserSync.init({
         server: { baseDir: 'dev/'},
@@ -77,6 +86,7 @@ const images = () => {
 
 exports.server = server;
 exports.styles = styles;
+exports.scripts = scripts;
 exports.images = images;
-exports.prod = series(clean, styles, copyCSS, copyJS, copyHTML, copyFavicon, images);
-exports.start = parallel (styles, server, watcher);
+exports.prod = series(clean, styles, scripts, copyCSS, copyJS, copyHTML, copyFavicon, images);
+exports.start = parallel (styles, scripts, server, watcher);
