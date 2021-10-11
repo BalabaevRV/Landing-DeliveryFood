@@ -85,8 +85,8 @@ const images = () => {
 }
 
 exports.server = server;
-exports.styles = styles;
 exports.scripts = scripts;
+exports.styles = styles;
 exports.images = images;
 exports.prod = series(clean, styles, scripts, copyCSS, copyJS, copyHTML, copyFavicon, images);
 exports.start = parallel (styles, scripts, server, watcher);
