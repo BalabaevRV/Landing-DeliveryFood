@@ -10,7 +10,14 @@ const closeBtn = popUp.querySelector(".btn--close");
 const formOrder = document.querySelector(".formOrder");
 closePopUpIcon.addEventListener("click", closePopUp);
 closeBtn.addEventListener("click", closePopUp);
+window.addEventListener("click", windowClick);
 popUp.addEventListener("transitionend", endClosePopUp);
+
+function windowClick(event) {
+	if (event.target === popUp) {
+		closePopUp();
+	}
+}
 
 function openPopUp(btn) {
 	body.style.overflow = "hidden";
@@ -21,6 +28,7 @@ function openPopUp(btn) {
 		popUp.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
 		popUpWindow.style.right ="0";
 	}, 20);
+	window.addEventListener("click", windowClick);
 }
 
 function closePopUp () {
@@ -28,6 +36,7 @@ function closePopUp () {
 	popUp.style.backgroundColor = "rgba(0, 0, 0, 0)";
 	popUpWindow.style.right ="-200%";
 	close = true;
+	window.removeEventListener("click", windowClick);
 }
 
 function endClosePopUp () {
