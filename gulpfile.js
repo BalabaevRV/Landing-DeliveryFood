@@ -18,7 +18,7 @@ const copyCSS = () => {
 }
 
 const copyJS = () => {
-    return src ("dev/scripts/*.js")
+    return src ("dev/js/*.js")
         .pipe(dest("prod/script/"))
 }
 
