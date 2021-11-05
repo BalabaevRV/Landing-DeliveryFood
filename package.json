@@ -1,7 +1,7 @@
 {
-  "name": "watercolor-courses",
+  "name": "food-delivery",
   "version": "1.0.0",
-  "description": "Landing for watercolor courses",
+  "description": "Landing for food delivery",
   "main": "index.js",
   "repository": {
     "type": "git",
