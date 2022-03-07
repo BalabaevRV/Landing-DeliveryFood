@@ -95,7 +95,14 @@
 		padding-top: 140px
 
 .heroScreen__wrap
+	overflow: hidden
+	height: 980px
 	position: relative
+
+.heroScreen__bg
+	position: absolute
+	z-index: -1
+	top: 0
 	width: 100%
 	background-repeat: repeat-x
 	background-position: top
@@ -103,6 +110,12 @@
 	overflow-x: hidden
 	min-height: 1040px
 	margin-bottom: -90px
+	min-height: 900px
+	margin-bottom:40px
+	background-size: cover
+	background-repeat: no-repeat
+	@media screen and (max-width: $xlSize)
+		background-size: auto	
 	@media screen and (max-width: $mSize)
 		margin-bottom: -190px
 		background-position: center -100px
@@ -118,6 +131,7 @@
 	left: 0
 	width: 100%
 	min-width: 1300px
+	top: 220px
 	@media screen and (max-width: $mSize)
 		min-width: 1160px
 	@media screen and (max-width: $sSize)
@@ -146,6 +160,7 @@
 	text-align: center
 	position: relative
 	overflow-x: hidden
+	margin-top: -20px
 	margin-bottom: 100px
 	@media screen and (max-width: $xlSize)	
 		margin-bottom: 50px
@@ -383,12 +398,15 @@
 .foodGallery
 	text-align: center
 	background-image: url("/img/bg5thScreen.jpg")	
-	background-repeat: repeat-x
+	background-repeat: no-repeat
+	background-size: cover
 	padding-top: 60px
 	position: relative
 	padding-bottom: 100px
 	margin-bottom: 46px
 	overflow-x: hidden
+	@media screen and (max-width: $xlSize)
+		background-size: auto	
 	@media screen and (max-width: $sSize)
 			bottom: 0
 			padding-bottom: 200px
@@ -476,12 +494,15 @@
 
 .captionForm__wrap
 	background-image: url("/img/bg7thScreen.png")
-	background-repeat: repeat-x
+	background-repeat: no-repeat
+	background-size: cover
 	position: relative
 	top: 150px
 	padding-top: 63px
 	padding-left: 300px
 	padding-bottom: 80px
+	@media screen and (max-width: $xlSize)
+		background-size: auto	
 	@media screen and (max-width: $lSize)
 		padding-left: 160px
 	@media screen and (max-width: $mSize)
@@ -571,13 +592,18 @@
 	
 .FAQ
 	background-image: url("/img/bg8thScreen.jpg")
+	background-repeat: no-repeat
+	background-size: cover
 	padding-top: 65px
 	padding-bottom: 90px
 	position: relative
 	width: 100%
 	overflow-x: hidden
+	@media screen and (max-width: $xlSize)
+		background-size: auto	
 	@media screen and (max-width: $lSize)
 		padding-bottom: 280px
+		background-size: cover
 	@media screen and (max-width: $sSize)	
 		padding-bottom: 240px		
 
